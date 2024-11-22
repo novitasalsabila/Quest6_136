@@ -39,6 +39,13 @@ fun MahasiswaApp(
         startDestination = Halaman.Splash.name,
         modifier = Modifier.padding()
     ) {
+        composable(route = Halaman.Splash.name){
+            SplashView(onMulaiButton = { //Navigasi ke halaman Mahasiswa saat tombol "Mulai" ditekan
+                navController.navigate(
+                    Halaman.Mahasiswa.name
+                )
+            })
+        }
 
     }
 }
