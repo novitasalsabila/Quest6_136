@@ -24,6 +24,33 @@ fun DetailView(
     onBackButtonClicked: () -> Unit,
     onResetButtonClicked: () -> Unit
 ) {
+    Column(
+        modifier = Modifier
+            .padding(16.dp)
+            .fillMaxWidth(),
+        verticalArrangement = Arrangement.spacedBy(8.dp)
+    ) {
+
+        // Judul bagian data mahasiswa
+        Text("Detail Mahasiswa", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+
+        // Menampilkan data Mahasiswa
+        DetailRow(label = "Nama", value = mahasiswa.nama)
+        DetailRow(label = "NIM", value = mahasiswa.nim)
+        DetailRow(label = "Email", value = mahasiswa.email)
+
+        Spacer(modifier = Modifier.padding(8.dp))
+
+        // Menampilkan Rencana Studi
+        Text("Rencana Studi", fontSize = 20.sp, fontWeight = FontWeight.Bold)
+        DetailRow(label = "Mata Kuliah", value = rencanaStudi.mataKuliah)
+        DetailRow(label = "Kelas", value = rencanaStudi.kelas)
+
+        Spacer(modifier = Modifier.padding(8.dp))
+
+
+    }
+
 
 }
 
