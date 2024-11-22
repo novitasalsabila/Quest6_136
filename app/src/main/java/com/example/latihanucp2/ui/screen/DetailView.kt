@@ -48,7 +48,25 @@ fun DetailView(
 
         Spacer(modifier = Modifier.padding(8.dp))
 
+// Tombol Navigasi
+        Button(
+            onClick = onBackButtonClicked,
+            modifier = Modifier.fillMaxWidth(),
+            interactionSource = remember { MutableInteractionSource() } // Tambahkan ini
+        ) {
+            Text("Kembali")
+        }
 
+
+        Spacer(modifier = Modifier.padding(4.dp)) // Menambahkan jarak antar tombol
+
+        Button(
+            onClick = onResetButtonClicked,
+            modifier = Modifier.fillMaxWidth(),
+            interactionSource = remember { MutableInteractionSource() } // Tambahkan ini
+        ) {
+            Text("Reset")
+        }
     }
 
 
